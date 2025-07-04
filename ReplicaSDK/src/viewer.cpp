@@ -1,8 +1,11 @@
 // Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
+// #include <epoxy/gl.h>
+// #include <GL/gl.h>
+#include <GL/glew.h>
 #include <PTexLib.h>
 
 #include <pangolin/display/display.h>
-#include <pangolin/display/widgets/widgets.h>
+#include <pangolin/display/widgets.h>
 
 #include "GLCheck.h"
 #include "MirrorRenderer.h"

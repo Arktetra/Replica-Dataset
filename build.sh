@@ -4,7 +4,7 @@
 cd 3rdparty/Pangolin
 mkdir build
 cd build
-cmake ..
+CMAKE_POLICY_VERSION_MINIMUM=2.6.0 cmake ..
 make -j
 
 cd ../../../

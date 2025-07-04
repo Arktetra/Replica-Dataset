@@ -1,5 +1,5 @@
 # Copyright (c) Facebook, Inc. and its affiliates. All Rights Reserved
-cmake_minimum_required(VERSION 2.6.0)
+cmake_minimum_required(VERSION 3.5.0)
 
 project(ReplicaSDK)
 
@@ -10,8 +10,8 @@ set(PTEX_SHADER_DIR "${CMAKE_CURRENT_LIST_DIR}/shaders" CACHE PATH "Where the sh
 file(GLOB srcs_ptex ptex/*.cpp)
 file(GLOB hdrs include/*.h)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -msse2 -msse3 -Wall -std=c++11 -fopenmp -DSHADER_DIR=${PTEX_SHADER_DIR}")
-
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3 -msse2 -msse3 -Wall -std=c++14 -fopenmp -lGLEW -DSHADER_DIR=${PTEX_SHADER_DIR}")
+message(STATUS "${CMAKE_CXX_FLAGS}")
 add_library(ptex SHARED
             ${srcs_ptex}
             ${hdrs}

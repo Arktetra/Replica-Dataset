@@ -10,7 +10,7 @@ else
   exit 1
 fi
 
-for p in {a..q}
+for p in {a..f}
 do
   # Ensure files are continued in case the script gets interrupted halfway through
   wget --continue https://github.com/facebookresearch/Replica-Dataset/releases/download/v1.0/replica_v1_0.tar.gz.parta$p
